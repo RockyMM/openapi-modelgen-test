@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  description: This API is a test
+  version: 1.0.0
+components:
+  schemas:
+    ValidTakeoverProfiles:
+      type: object
+      properties:
+        profiles:
+          type: array
+          items:
+            type: object
+            properties:
+              profileName:
+                type: string
+              tariffType:
+                type: string
+              mergedConfigId:
+                type: string
+              value:
+                type: number
+              tag:
+                type: string
+              unit:
+                type: string
+    
