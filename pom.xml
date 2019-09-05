@@ -67,6 +67,7 @@
                         </goals>
                         <configuration>
                             <inputSpec>${project.basedir}/src/main/openapi/mdh.yml</inputSpec>
+<!--                            <inputSpec>https://raw.githubusercontent.com/RockyMM/openapi-modelgen-test/master/src/main/openapi/mdh.yml</inputSpec>-->
                             <output>${project.build.directory}/generated-sources/mdh</output>
                             <modelPackage>com.dto.test</modelPackage>
                             <verbose>true</verbose>
