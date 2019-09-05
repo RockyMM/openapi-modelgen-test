@@ -75,8 +75,10 @@
                             <generateApis>false</generateApis>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <generateModelTests>false</generateModelTests>
+                            <generateModelDocumentation>false</generateModelDocumentation>
                             <skipValidateSpec>true</skipValidateSpec>
                             <additionalProperties>java8=true,dateLibrary=java8-localdatetime</additionalProperties>
+                            <supportingFilesToGenerate>pom.xml</supportingFilesToGenerate>
 <!--                            <additionalProperties>withXml=true</additionalProperties>--> <!-- uncomment this line to get Xml annotations -->
                         </configuration>
                     </execution>
