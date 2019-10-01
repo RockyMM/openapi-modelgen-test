@@ -1,12 +1,12 @@
 package com.modelgen.test;
 
 import com.dto.test.ValidTakeoverProfiles;
-import com.dto.test.ValidTakeoverProfilesProfiles;
+import com.dto.test.ValidTakeoverProfilesProfile;
 import com.helper.XmlHelper;
 import org.junit.Test;
 
-
-import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertThat;
 
 public class MarshallingTest {
@@ -17,8 +17,8 @@ public class MarshallingTest {
 		// given
 		ValidTakeoverProfiles underTest =
 				new ValidTakeoverProfiles()
-					.addProfilesItem(
-							new ValidTakeoverProfilesProfiles()
+					.addProfileItem(
+							new ValidTakeoverProfilesProfile()
 								.profileName("abc")
 					);
 

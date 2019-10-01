@@ -21,7 +21,7 @@ components:
     ValidTakeoverProfiles:
       type: object
       properties:
-        profiles:
+        profile:
           type: array
           items:
             type: object
