@@ -47,6 +47,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.28</version>
+        </dependency>
+
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
@@ -59,7 +65,7 @@
             <plugin>
                 <groupId>org.openapitools</groupId>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>4.1.1</version>
+                <version>4.1.2</version>
                 <executions>
                     <execution>
                         <goals>
@@ -72,15 +78,21 @@
                             <modelPackage>com.dto.test</modelPackage>
                             <verbose>true</verbose>
                             <generatorName>java</generatorName> 
-                            <withXml>true</withXml> <!-- I said true, but it is not reacting -->
+<!--                            <withXml>true</withXml> &lt;!&ndash; I said true, but it is not reacting &ndash;&gt;-->
                             <generateApis>false</generateApis>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <generateModelTests>false</generateModelTests>
                             <generateModelDocumentation>false</generateModelDocumentation>
                             <skipValidateSpec>true</skipValidateSpec>
-                            <additionalProperties>java8=true,dateLibrary=java8-localdatetime</additionalProperties>
                             <supportingFilesToGenerate>pom.xml</supportingFilesToGenerate>
-<!--                            <additionalProperties>withXml=true</additionalProperties>--> <!-- uncomment this line to get Xml annotations -->
+                            <additionalProperties>
+                                <additionalProperty>java8=true</additionalProperty>
+                                <additionalProperty>dateLibrary=java8</additionalProperty>
+                                <additionalProperty>jackson=false</additionalProperty>
+<!--                                <additionalProperty>library=jersey2</additionalProperty>-->
+<!--                                <additionalProperty>serializationLibrary=jackson</additionalProperty>-->
+                                <additionalProperty>withXml=true</additionalProperty>
+                            </additionalProperties>
                         </configuration>
                     </execution>
                 </executions>

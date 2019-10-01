@@ -1,7 +1,21 @@
 openapi: 3.0.0
 info:
   description: This API is a test
+  title: Testing API
   version: 1.0.0
+paths:
+  /profiles:
+    get:
+      summary: 'get all profiles'
+      operationId: 'get-profiles'
+      responses:
+        200:
+          description: OK
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ValidTakeoverProfiles'
+
 components:
   schemas:
     ValidTakeoverProfiles:
